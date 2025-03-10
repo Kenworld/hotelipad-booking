@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotelipad: Hotels in Ghana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-2 border-bottom">
+        <div class="container-fluid px-4">
+            <!-- Logo -->
+            <a class="navbar-brand" href="/">
+                <img src="assets/images/logo/logo-1.png" alt="Holtelipad" height="28">
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#">
+                            <i class="nav-icon fa-solid fa-user-tie" style="font-size: 30px;"></i>
+                            <span class="d-inline-block">
+                                Become a Member
+                                <small class="d-block text-muted">Additional 10% off on stays</small>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#">
+                            <i class="nav-icon fa-solid fa-suitcase" style="font-size: 30px;"></i>
+                            <span class="d-inline-block">
+                                Holtelipad for Business
+                                <small class="d-block text-muted">Trusted by 5000 Corporates</small>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#">
+                            <i class="nav-icon fa-solid fa-hotel" style="font-size: 30px;"></i>
+                            <span class="d-inline-block">
+                                List your property
+                                <small class="d-block text-muted">Start earning in 30 mins</small>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#">
+                            <i class="nav-icon fa-solid fa-phone" style="font-size: 30px;"></i>
+                            <span class="d-inline-block">
+                                0124-6201611
+                                <small class="d-block text-muted">Call us to book now</small>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link language-selector" href="#">
+                            <i class="bi bi-globe me-1"></i>
+                            English
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link login-link" href="#">
+                            <i class="bi bi-person-circle me-1"></i>
+                            Login / Signup
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <i class="fa fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href=" #" class="nav-item">
+            <i class="fa fa-search"></i>
+            <span>Search</span>
+        </a>
+        <a href=" #" class="nav-item">
+            <i class="fa fa-suitcase"></i>
+            <span>Bookings</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa fa-tag"></i>
+            <span>Offers</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa fa-user"></i>
+            <span>Account</span>
+        </a>
+    </nav>
+    <button class="fab">
+        📞 Call to Book
+    </button>
+    <div class="search-container">
+        <input type="text" placeholder="Search for city, location or hotel">
+        <input type="date">
+        <button class="search-btn">Search</button>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Filter Section -->
+            <div class="col-md-3 filter-section">
+                <h5>Filters</h5>
+                <h6>Popular locations in Delhi, India</h6>
+                <input type="text" class="form-control mb-2" placeholder="Search locations">
+                <ul class="list-unstyled">
+                    <li>Tamale</li>
+                    <li>Sandema</li>
+                    <li>Accra</li>
+                    <li>Kumasi</li>
+                    <li>Cape Coast</li>
+                    <li><a href="#" class="text-danger">+ View More</a></li>
+                </ul>
+                <h6>Price</h6>
+                <section class="range-slider">
+                    <input type="range" class="form-range" id="priceRange" min="0" max="5000" value="1076">
+                    <p id="priceDisplay">GHS 1076</p>
+                </section>
+                <h6>Collections</h6>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="groupTravelers">
+                    <label class="form-check-label" for="groupTravelers">Group Travelers</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="localIds">
+                    <label class="form-check-label" for="localIds">Local IDs accepted</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="couples">
+                    <label class="form-check-label" for="couples">Hotelipad welcomes couples</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="internationalGuests">
+                    <label class="form-check-label" for="internationalGuests">International Guests</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="recommended">
+                    <label class="form-check-label" for="recommended">Hotelipad Recommended</label>
+                </div>
+                <a href="#" class="text-danger">- View Less</a>
+                <h6>Categories</h6>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="oyoRooms">
+                    <label class="form-check-label" for="oyoRooms">Hotelipad Rooms - Super affordable stays with
+                        essential
+                        amenities</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="townhouse">
+                    <label class="form-check-label" for="townhouse">Townhouse - Your friendly premium</label>
+                </div>
+            </div>
+
+            <!-- Listing Section -->
+            <div class="col-md-9 listing-section">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4>290 Hotelipad in Sunyani, Ghana</h4>
+                    <div>
+                        <button class="btn btn-outline-secondary btn-sm me-2">Map View</button>
+                        <select class="form-select form-select-sm d-inline-block w-auto">
+                            <option>Sort By Popularity</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="welcome-banner">
+                    <p class="mb-0"><span class="text-warning">⚠️</span> WELCOME75, Valid until 10th Mar 2025.</p>
+                </div>
+                <!-- Hotel Card 1 -->
+                <div class="hotel-card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/assets/images/hotels/w-img-5.webp" class="img-fluid hotel-image" id="mainImage"
+                                data-lightbox="hotel" alt="Hotel Staircase">
+                            <div class="thumbnail-images">
+                                <img src="/assets/images/hotels/w-img-5.webp" class="thumbnail active"
+                                    data-image="/assets/images/hotels/w-img-5.webp" alt="Thumbnail 1">
+                                <img src="/assets/images/hotels/w-img-6.webp" class="thumbnail"
+                                    data-image="/assets/images/hotels/w-img-6.webp" alt="Thumbnail 2">
+                                <img src="/assets/images/hotels/w-img-7.webp" class="thumbnail"
+                                    data-image="/assets/images/hotels/w-img-7.webp" alt="Thumbnail 3">
+                                <!-- Add more thumbnails as needed -->
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Golden Bean Hotel</h5>
+                                <p class="card-text">Ahodwo Nyieso, Kumasi | 4.6 (569 Ratings) <span
+                                        class="badge bg-success">Excellent</span></p>
+                                <p class="card-text"><span class="badge bg-primary">Free WiFi</span> <span
+                                        class="badge bg-primary">Geyser</span> <span class="badge bg-primary">Power
+                                        backup</span> + 4 more</p>
+                                <p class="card-text"><s>GHS839</s> <span class="price-tag">GHS367</span> 72% off</p>
+                                <p class="card-text text-muted">+ GHS190 taxes & fees / per room per night</p>
+                                <a href="#" class="btn btn-outline-secondary btn-sm me-2">View Details</a>
+                                <a href="#" class="btn btn-book btn-sm">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotel-card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/assets/images/hotels/w-img-5.webp" class="img-fluid hotel-image" id="mainImage"
+                                data-lightbox="hotel" alt="Hotel Staircase">
+                            <div class="thumbnail-images">
+                                <img src="/assets/images/hotels/w-img-5.webp" class="thumbnail active"
+                                    data-image="/assets/images/hotels/w-img-5.webp" alt="Thumbnail 1">
+                                <img src="/assets/images/hotels/w-img-6.webp" class="thumbnail"
+                                    data-image="/assets/images/hotels/w-img-6.webp" alt="Thumbnail 2">
+                                <img src="/assets/images/hotels/w-img-7.webp" class="thumbnail"
+                                    data-image="/assets/images/hotels/w-img-7.webp" alt="Thumbnail 3">
+                                <!-- Add more thumbnails as needed -->
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Lancaster Hotel</h5>
+                                <p class="card-text">Ahodwo nhyieso, Kumasi | 4.6 (569 Ratings) <span
+                                        class="badge bg-success">Excellent</span></p>
+                                <p class="card-text"><span class="badge bg-primary">Free WiFi</span> <span
+                                        class="badge bg-primary">Geyser</span> <span class="badge bg-primary">Power
+                                        backup</span> + 4 more</p>
+                                <p class="card-text"><s>GHS839</s> <span class="price-tag">GHS367</span> 72% off</p>
+                                <p class="card-text text-muted">+ GHS190 taxes & fees / per room per night</p>
+                                <a href="#" class="btn btn-outline-secondary btn-sm me-2">View Details</a>
+                                <a href="#" class="btn btn-book btn-sm">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotel-card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/assets/images/hotels/agyeiwaa.png" class="img-fluid hotel-image" id="mainImage"
+                                data-lightbox="hotel" alt="Hotel Staircase">
+                            <div class="thumbnail-images">
+                                <img src="/assets/images/hotels/w-img-5.webp" class="thumbnail active"
+                                    data-image="/assets/images/hotels/w-img-5.webp" alt="Thumbnail 1">
+                                <img src="/assets/images/hotels/w-img-6.webp" class="thumbnail"
+                                    data-image="/assets/images/hotels/w-img-6.webp" alt="Thumbnail 2">
+                                <img src="/assets/images/hotels/w-img-7.webp" class="thumbnail"
+                                    data-image="/assets/images/hotels/w-img-7.webp" alt="Thumbnail 3">
+                                <!-- Add more thumbnails as needed -->
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Agyeiwaa Hotel</h5>
+                                <p class="card-text">Ksi Station, Techiman | 4.6 (569 Ratings) <span
+                                        class="badge bg-success">Excellent</span></p>
+                                <p class="card-text"><span class="badge bg-primary">Free WiFi</span> <span
+                                        class="badge bg-primary">Geyser</span> <span class="badge bg-primary">Power
+                                        backup</span> + 4 more</p>
+                                <p class="card-text"><s>GHS839</s> <span class="price-tag">GHS367</span> 72% off</p>
+                                <p class="card-text text-muted">+ GHS190 taxes & fees / per room per night</p>
+                                <a href="#" class="btn btn-outline-secondary btn-sm me-2">View Details</a>
+                                <a href="#" class="btn btn-book btn-sm">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+</body>
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start text-white" style="background-color: #6D787D">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-between p-4"
+        style="background-color: #6D787D;border-bottom: 1px solid #fff;">
+        <!-- Left -->
+        <div class="me-5">
+            <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-linkedin"></i>p
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+        <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="border-right: 1px solid #fff;">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold">Hotelipad Booking</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                    <p>
+                        Hotelipad is Ghana's best online hotel booking site. We offer a wide range of hotels and resorts
+                        to choose from.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" style="border-right: 1px solid #fff;">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold">QuickLinks</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                    <p>
+                        <a href="#!" class="text-white">About Us</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-white">Blogs and News</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-white">Support</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-white">Contact Us</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4" style="border-right: 1px solid #fff;">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold">Useful links</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                    <p>
+                        <a href="#!" class="text-white">Your Account</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-white">Become a Partner</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-white">All Hotels</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-white">Help</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold">Contact</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                    <p><i class="fas fa-home mr-3"></i> Kentinkrono ,AK-27191,Ghana</p>
+                    <p><i class="fas fa-envelope mr-3"></i> info@HOTELIPADBOOKINGS.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);border-top: 1px solid #fff;;">
+        © 2025 Copyright:
+        <a class="text-white" href="#">Hotelipad.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<script src="/assets/js/script.js"></script>
+
+</html>
