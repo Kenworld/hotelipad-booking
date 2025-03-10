@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Booking - Hotelipad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Include your existing navigation here -->
+
+    <div class="container mt-4 mb-5">
+        <div class="row">
+            <!-- Booking Form Section -->
+            <div class="col-lg-8">
+                <div class="booking-progress mb-4">
+                    <div class="progress" style="height: 4px;">
+                        <div class="progress-bar" role="progressbar" style="width: 33%"></div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                        <span class="progress-step active">1. Your Details</span>
+                        <span class="progress-step">2. Payment</span>
+                        <span class="progress-step">3. Confirmation</span>
+                    </div>
+                </div>
+
+                <!-- Guest Details Form -->
+                <div class="booking-section card">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Guest Details</h3>
+                        <form id="guestDetailsForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name*</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last Name*</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address*</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number*</label>
+                                    <input type="tel" class="form-control" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Special Requests</label>
+                                    <textarea class="form-control" rows="3"
+                                        placeholder="Any special requirements?"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Room Selection -->
+                <div class="booking-section card mt-4">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Select Your Room</h3>
+                        <div class="room-options">
+                            <div class="room-option card mb-3">
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="roomType" id="deluxeRoom"
+                                            checked>
+                                        <label class="form-check-label" for="deluxeRoom">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div>
+                                                    <h5 class="mb-1">Deluxe Room</h5>
+                                                    <p class="text-muted mb-2">1 King Bed • City View • 32m²</p>
+                                                    <div class="room-amenities">
+                                                        <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                                                        <span><i class="fas fa-shower"></i> Private Bathroom</span>
+                                                        <span><i class="fas fa-tv"></i> Flat-screen TV</span>
+                                                    </div>
+                                                </div>
+                                                <div class="text-end">
+                                                    <div class="price-per-night">
+                                                        <span class="amount">GHS 367</span>
+                                                        <small class="text-muted">/night</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more room options as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Summary -->
+            <div class="col-lg-4">
+                <div class="booking-summary card sticky-top">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Booking Summary</h3>
+                        <div class="hotel-info-summary mb-3">
+                            <img src="assets/images/hotels/w-img-5.webp" alt="Hotel" class="img-fluid rounded mb-3">
+                            <h5>Golden Bean Hotel</h5>
+                            <p class="text-muted"><i class="fas fa-map-marker-alt"></i> Ahodwo Nyieso, Kumasi</p>
+                        </div>
+                        <div class="booking-details">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Check-in</span>
+                                <strong>Dec 15, 2023</strong>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Check-out</span>
+                                <strong>Dec 17, 2023</strong>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Guests</span>
+                                <strong>2 Adults</strong>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Room Type</span>
+                                <strong>Deluxe Room</strong>
+                            </div>
+                            <hr>
+                            <div class="price-breakdown">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>2 nights × GHS 367</span>
+                                    <span>GHS 734</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Taxes & fees</span>
+                                    <span>GHS 88</span>
+                                </div>
+                                <div class="d-flex justify-content-between total-price">
+                                    <strong>Total</strong>
+                                    <strong>GHS 822</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-100 mt-4">Continue to Payment</button>
+                        <p class="text-muted small text-center mt-3">
+                            <i class="fas fa-lock"></i> Secure booking • We protect your personal information
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include your existing footer here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

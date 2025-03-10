@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holtelipad: Ghana's Best Online Hotel Booking Website</title>
+    <title>Hotelipad: Hotels in Ghana</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -107,7 +107,7 @@
             <span>Account</span>
         </a>
     </nav>
-    <button class="float-btn">
+    <button class="fab">
         📞 Call to Book
     </button>
     <div class="search-container">
@@ -116,85 +116,119 @@
         <button class="search-btn">Search</button>
     </div>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <h2>Hotelipad has Over 180+ hotels and homes across the country</h2>
-        <div class="container mt-3">
-            <div class="search-bar">
-                <input type="text" placeholder="Accra, Ghana">
-                <input type="date">
-                <input type="date">
-                <select>
-                    <option>1 Room, 1 Guest</option>
-                </select>
-                <button>Search</button>
-            </div>
-        </div>
-    </div>
-    <!--Banners-->
-    <div class="container ads ad1-container">
-        <div class="left-content-ad">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Filters Sidebar -->
+            <div class="col-lg-3 filters-sidebar">
+                <div class="filters-container p-3">
+                    <h5 class="mb-3">Filters</h5>
 
-            <h1>Ghana's no 1 premium value hotels</h1>
-        </div>
-        <div class="center-content-ad">
-            <ul id="points">
-                <li>Assured Check-In</li>
-                <li>Well Furnished clean rooms</li>
-                <li>1000+ new properties</li>
-            </ul>
-            <a href="properties.html" class="btn btn-success">Book Now</a>
-        </div>
-        <div class="end-content-ad">
-            <h4>starting from <br><span style="font-size: 40px;">GHS500.00</span></h4>
-        </div>
-    </div>
-    <!--Banners-->
-    <div class="container ads ad2-container">
-        <div class="left-content-ad">
+                    <!-- Popular Locations -->
+                    <div class="filter-section mb-4">
+                        <h6>Popular locations in Ghana</h6>
+                        <div class="search-box mb-2">
+                            <input type="text" class="form-control" placeholder="Search...">
+                        </div>
+                        <div class="location-tags">
+                            <a href="#" class="location-tag">Accra</a>
+                            <a href="#" class="location-tag">Kumasi</a>
+                            <a href="#" class="location-tag">Takoradi</a>
+                        </div>
+                    </div>
 
-            <h1>Ghana's no 1 premium value hotels</h1>
-        </div>
-        <div class="center-content-ad">
-            <ul id="points">
-                <li>Assured Check-In</li>
-                <li>Well Furnished clean rooms</li>
-                <li>1000+ new properties</li>
-            </ul>
-            <a href="" class="btn btn-success">Book Now</a>
-        </div>
-        <div class="end-content-ad">
-            <h4>starting from <br><span style="font-size: 40px;">GHS500.00</span></h4>
-        </div>
-    </div>
+                    <!-- Price Range -->
+                    <div class="filter-section mb-4">
+                        <h6>Price</h6>
+                        <input type="range" class="form-range" min="0" max="1000" value="500">
+                        <div class="price-labels d-flex justify-content-between">
+                            <span>₵0</span>
+                            <span>₵1000</span>
+                        </div>
+                    </div>
 
-    <div class="container my-5">
-        <div class="row align-items-center">
-            <!-- Map Section -->
-            <div class="col-md-6">
-                <div class="map-container d-flex justify-content-center align-items-center">
-                    <p class="text-white">MAP HERE</p>
-                </div>
-            </div>
-
-            <!-- Text Section -->
-            <div class="col-md-6">
-                <div class="info-container">
-                    <h2>There's a Hotelipad for every traveler around. Always.</h2>
-                    <p>More Destinations. More Ease. More Affordable.</p>
-                    <p class="stats">300+ Properties | 15+ Countries | 174+ Hotels & Homes</p>
-                    <div class="countries">
-                        <span class="country text-success">● Nigeria</span>
-                        <span class="country text-danger">● Ghana</span>
-                        <span class="country text-warning">● Denmark</span>
-                        <span class="country text-primary">● US</span>
-                        <span class="country text-pink">● UK</span>
-                        <span class="country text-info">● Netherlands</span>
+                    <!-- Collections -->
+                    <div class="filter-section mb-4">
+                        <h6>Collections</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="familyOyo">
+                            <label class="form-check-label" for="familyOyo">Family Hotels</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="groupTravellers">
+                            <label class="form-check-label" for="groupTravellers">For Group Travellers</label>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Properties List -->
+            <div class="col-lg-9">
+                <!-- Header -->
+                <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
+                    <h5>290 Hotels in Ghana</h5>
+                    <div class="d-flex align-items-center">
+                        <div class="form-check form-switch me-3">
+                            <input class="form-check-input" type="checkbox" id="mapView">
+                            <label class="form-check-label" for="mapView">Map View</label>
+                        </div>
+                        <select class="form-select">
+                            <option>Popularity</option>
+                            <option>Price - Low to High</option>
+                            <option>Price - High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Properties Grid -->
+                <div class="properties-grid p-3">
+                    <!-- Property Card -->
+                    <div class="property-card mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <div class="property-images">
+                                    <img src="assets/images/hotels/w-img-4.webp" class="main-image" alt="Hotel">
+                                    <div class="thumbnail-grid">
+                                        <img src="assets/images/hotels/w-img-5.webp" alt="">
+                                        <img src="assets/images/hotels/w-img-6.webp" alt="">
+                                        <img src="assets/images/hotels/w-img-7.webp" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="card-title">Super Hotel Accra Central</h5>
+                                        <span class="rating-badge">4.8 ★</span>
+                                    </div>
+                                    <p class="location">Accra Central, Ghana</p>
+                                    <div class="amenities">
+                                        <span><i class="bi bi-wifi"></i> Free Wifi</span>
+                                        <span><i class="bi bi-water"></i> Geyser</span>
+                                        <span><i class="bi bi-elevator"></i> Elevator</span>
+                                    </div>
+                                    <div class="pricing mt-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="current-price">₵811</span>
+                                                <span class="original-price">₵3,622</span>
+                                                <span class="discount">73% off</span>
+                                            </div>
+                                            <div class="booking-buttons">
+                                                <button class="btn btn-outline-primary">View Details</button>
+                                                <button class="btn btn-success">Book Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat property cards -->
+                </div>
+            </div>
         </div>
     </div>
+
 </body>
 
 
@@ -206,7 +240,6 @@
         <!-- Left -->
         <div class="me-5">
             <span>Get connected with us on social networks:</span>
-
         </div>
         <!-- Left -->
 
@@ -225,7 +258,7 @@
                 <i class="fab fa-instagram"></i>
             </a>
             <a href="" class="text-white me-4">
-                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-linkedin"></i>p
             </a>
             <a href="" class="text-white me-4">
                 <i class="fab fa-tiktok"></i>

@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holtelipad: Ghana's Best Online Hotel Booking Website</title>
+    <title>Golden Bean Hotel - Hotelipad</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link href="assets/css/style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 
 </head>
 
@@ -115,86 +116,182 @@
         <input type="date">
         <button class="search-btn">Search</button>
     </div>
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <h2>Hotelipad has Over 180+ hotels and homes across the country</h2>
-        <div class="container mt-3">
-            <div class="search-bar">
-                <input type="text" placeholder="Accra, Ghana">
-                <input type="date">
-                <input type="date">
-                <select>
-                    <option>1 Room, 1 Guest</option>
-                </select>
-                <button>Search</button>
-            </div>
-        </div>
-    </div>
-    <!--Banners-->
-    <div class="container ads ad1-container">
-        <div class="left-content-ad">
-
-            <h1>Ghana's no 1 premium value hotels</h1>
-        </div>
-        <div class="center-content-ad">
-            <ul id="points">
-                <li>Assured Check-In</li>
-                <li>Well Furnished clean rooms</li>
-                <li>1000+ new properties</li>
-            </ul>
-            <a href="properties.html" class="btn btn-success">Book Now</a>
-        </div>
-        <div class="end-content-ad">
-            <h4>starting from <br><span style="font-size: 40px;">GHS500.00</span></h4>
-        </div>
-    </div>
-    <!--Banners-->
-    <div class="container ads ad2-container">
-        <div class="left-content-ad">
-
-            <h1>Ghana's no 1 premium value hotels</h1>
-        </div>
-        <div class="center-content-ad">
-            <ul id="points">
-                <li>Assured Check-In</li>
-                <li>Well Furnished clean rooms</li>
-                <li>1000+ new properties</li>
-            </ul>
-            <a href="" class="btn btn-success">Book Now</a>
-        </div>
-        <div class="end-content-ad">
-            <h4>starting from <br><span style="font-size: 40px;">GHS500.00</span></h4>
-        </div>
-    </div>
-
-    <div class="container my-5">
-        <div class="row align-items-center">
-            <!-- Map Section -->
-            <div class="col-md-6">
-                <div class="map-container d-flex justify-content-center align-items-center">
-                    <p class="text-white">MAP HERE</p>
+    <main class="container-fluid">
+        <!-- Property Details Content -->
+        <div class="container-fluid p-0">
+            <!-- Image Gallery -->
+            <div class="swiper property-gallery">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/hotels/w-img-5.webp" alt="Hotel View">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/hotels/w-img-6.webp" alt="Room">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/hotels/w-img-7.webp" alt="Bathroom">
+                    </div>
+                    <!-- Add more slides as needed -->
                 </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
 
-            <!-- Text Section -->
-            <div class="col-md-6">
-                <div class="info-container">
-                    <h2>There's a Hotelipad for every traveler around. Always.</h2>
-                    <p>More Destinations. More Ease. More Affordable.</p>
-                    <p class="stats">300+ Properties | 15+ Countries | 174+ Hotels & Homes</p>
-                    <div class="countries">
-                        <span class="country text-success">● Nigeria</span>
-                        <span class="country text-danger">● Ghana</span>
-                        <span class="country text-warning">● Denmark</span>
-                        <span class="country text-primary">● US</span>
-                        <span class="country text-pink">● UK</span>
-                        <span class="country text-info">● Netherlands</span>
+            <div class="container mt-4">
+                <!-- Hotel Info -->
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="hotel-info mb-4">
+                            <h1 class="hotel-name">Golden Bean Hotel</h1>
+                            <p class="hotel-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Ahodwo Nyieso, Kumasi, Ghana
+                                <a href="#map" class="text-primary ms-2">Show on map</a>
+                            </p>
+                            <div class="rating-badge d-inline-block">
+                                <span class="score">4.6</span>
+                                <span class="rating-text">Excellent</span>
+                                <span class="reviews">(569 reviews)</span>
+                            </div>
+                        </div>
+
+                        <!-- Popular Facilities -->
+                        <div class="facilities-section mb-4">
+                            <h2>Most Popular Facilities</h2>
+                            <div class="row g-3">
+                                <div class="col-6 col-md-4">
+                                    <div class="facility-item">
+                                        <i class="fas fa-wifi"></i>
+                                        <span>Free WiFi</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="facility-item">
+                                        <i class="fas fa-parking"></i>
+                                        <span>Free Parking</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="facility-item">
+                                        <i class="fas fa-swimming-pool"></i>
+                                        <span>Swimming Pool</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="facility-item">
+                                        <i class="fas fa-utensils"></i>
+                                        <span>Restaurant</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="facility-item">
+                                        <i class="fas fa-dumbbell"></i>
+                                        <span>Fitness Center</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="facility-item">
+                                        <i class="fas fa-spa"></i>
+                                        <span>Spa</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Highlights -->
+                        <div class="highlights-section mb-4">
+                            <h2>Property Highlights</h2>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="highlight-card">
+                                        <i class="fas fa-bed"></i>
+                                        <div class="highlight-content">
+                                            <h3>Perfect for long stays</h3>
+                                            <p>Top location: Highly rated by recent guests (8.9)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="highlight-card">
+                                        <i class="fas fa-concierge-bell"></i>
+                                        <div class="highlight-content">
+                                            <h3>Breakfast Info</h3>
+                                            <p>Continental, Full English/Irish, Vegetarian, Halal, Gluten-free</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="description-section mb-4">
+                            <h2>Description</h2>
+                            <div class="description-content">
+                                <p>Located in Kumasi, Golden Bean Hotel offers 4-star accommodation with a terrace and
+                                    restaurant. This 4-star hotel offers a 24-hour front desk, room service and free
+                                    WiFi. The hotel features family rooms.</p>
+                                <p>The units come with air conditioning, a flat-screen TV with satellite channels, a
+                                    kettle, a shower, free toiletries and a desk. At the hotel each room is fitted with
+                                    a wardrobe and a private bathroom.</p>
+                                <button class="btn btn-link p-0" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#moreDescription">
+                                    Read more
+                                </button>
+                                <div class="collapse" id="moreDescription">
+                                    <p>Guests at Golden Bean Hotel can enjoy a continental or a buffet breakfast. The
+                                        accommodation offers a children's playground. You can play billiards at Golden
+                                        Bean Hotel.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Section -->
+                    <div class="col-lg-4">
+                        <div class="booking-card sticky-top">
+                            <div class="price-info mb-3">
+                                <span class="current-price">GHS 367</span>
+                                <span class="original-price">GHS 839</span>
+                                <span class="discount-badge">72% OFF</span>
+                            </div>
+                            <form class="booking-form">
+                                <div class="mb-3">
+                                    <label>Check-in / Check-out</label>
+                                    <div class="input-group">
+                                        <input type="date" class="form-control" required>
+                                        <input type="date" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Guests</label>
+                                    <select class="form-select">
+                                        <option>1 Adult</option>
+                                        <option>2 Adults</option>
+                                        <option>2 Adults, 1 Child</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 mb-3">Book Now</button>
+                                <p class="text-muted small">No prepayment needed - pay at the property</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Section -->
+                <div id="map" class="map-section mb-4">
+                    <h2>Location</h2>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.7325563503745!2d-1.6307227!3d6.6789499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb96f349e4c2cd%3A0x6c078e47c5d8609b!2sGolden%20Bean%20Hotel!5e0!3m2!1sen!2sgh!4v1647881147685!5m2!1sen!2sgh"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+
 </body>
 
 
@@ -206,7 +303,6 @@
         <!-- Left -->
         <div class="me-5">
             <span>Get connected with us on social networks:</span>
-
         </div>
         <!-- Left -->
 
@@ -322,6 +418,8 @@
 </footer>
 <!-- Footer -->
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
 
 </html>

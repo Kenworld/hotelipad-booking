@@ -107,7 +107,7 @@
             <span>Account</span>
         </a>
     </nav>
-    <button class="fab">
+    <button class="float-btn">
         📞 Call to Book
     </button>
     <div class="search-container">
@@ -117,58 +117,88 @@
     </div>
 
     <div class="container-fluid">
-        <div class="row">
+        <div class="row p-4 mx-auto">
             <!-- Filter Section -->
             <div class="col-md-3 filter-section">
-                <h5>Filters</h5>
-                <h6>Popular locations in Delhi, India</h6>
-                <input type="text" class="form-control mb-2" placeholder="Search locations">
-                <ul class="list-unstyled">
-                    <li>Tamale</li>
-                    <li>Sandema</li>
-                    <li>Accra</li>
-                    <li>Kumasi</li>
-                    <li>Cape Coast</li>
-                    <li><a href="#" class="text-danger">+ View More</a></li>
-                </ul>
-                <h6>Price</h6>
-                <section class="range-slider">
-                    <input type="range" class="form-range" id="priceRange" min="0" max="5000" value="1076">
-                    <p id="priceDisplay">GHS 1076</p>
+
+                <section class="mt-2">
+                    <h6 class="text-primary">Popular locations in Ghana</h6>
+                    <input type="text" class="form-control mb-2" placeholder="Search locations">
                 </section>
-                <h6>Collections</h6>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="groupTravelers">
-                    <label class="form-check-label" for="groupTravelers">Group Travelers</label>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="localIds">
-                    <label class="form-check-label" for="localIds">Local IDs accepted</label>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="couples">
-                    <label class="form-check-label" for="couples">Hotelipad welcomes couples</label>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="internationalGuests">
-                    <label class="form-check-label" for="internationalGuests">International Guests</label>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="recommended">
-                    <label class="form-check-label" for="recommended">Hotelipad Recommended</label>
-                </div>
-                <a href="#" class="text-danger">- View Less</a>
-                <h6>Categories</h6>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="oyoRooms">
-                    <label class="form-check-label" for="oyoRooms">Hotelipad Rooms - Super affordable stays with
-                        essential
-                        amenities</label>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="townhouse">
-                    <label class="form-check-label" for="townhouse">Townhouse - Your friendly premium</label>
-                </div>
+
+
+                <section class="range-slider m-4">
+                    <h6>Price per night</h6>
+                    <input type="range" class="form-range" id="priceRange" min="0" max="5000" value="500">
+                    <p id="priceDisplay">GHS 500.00</p>
+                </section>
+                <section class="m-4">
+                    <h6 class="text-primary">Filter By</h6>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="groupTravelers">
+                        <label class="form-check-label" for="groupTravelers">Breakfast Included</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="localIds">
+                        <label class="form-check-label" for="localIds">With Pool</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="couples">
+                        <label class="form-check-label" for="couples">With Hot tub</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="internationalGuests">
+                        <label class="form-check-label" for="internationalGuests">International Guests</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="recommended">
+                        <label class="form-check-label" for="recommended">Hotelipad Recommended</label>
+                    </div>
+                </section>
+
+                <section class="m-4">
+                    <h6 class="text-primary">Stay Options</h6>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" checked id="any">
+                        <label class="form-check-label" for="any">Any</label>
+
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="any">
+                        <label class="form-check-label" for="hotels">Hotels</label>
+
+                    </div>
+                    <div class="form-check">
+
+                        <input type="radio" class="form-check-input" id="any">
+                        <label class="form-check-label" for="homes">Homes</label>
+                    </div>
+                </section>
+                <section class="m-4">
+                    <h6 class="text-primary">Property Class</h6>
+                    <a class="btn btn-outline-secondary rate" href=""> 1 <i class="fa fa-star"> </i></a>
+                    <a class="btn btn-outline-secondary rate" href=""> 2 <i class="fa fa-star"> </i></a>
+                    <a class="btn btn-outline-secondary rate" href=""> 3 <i class="fa fa-star"> </i></a>
+                    <a class="btn btn-outline-secondary rate" href=""> 4 <i class="fa fa-star"> </i></a>
+                    <a class="btn btn-outline-secondary rate" href=""> 5 <i class="fa fa-star"> </i></a>
+                </section>
+                <section class="m-4">
+                    <h6 class="text-primary">Amenities</h6>
+                    <div class="row">
+                        <div class="col-6 justify-content-center text-center amenities">
+                            <a href=""><i class="fa fa-swimming-pool"></i> </a>
+                            <h6>Pool</h6>
+                        </div>
+                        <div class="col-6 justify-content-center text-center amenities">
+                            <a href=""><i class="fa fa-bath"></i> </a>
+                            <h6>Hot Tub</h6>
+                        </div>
+                        <div class="col-6 justify-content-center text-center amenities">
+                            <a href=""><i class="fa fa-air-conditioner"></i> </a>
+                            <h6>Air Condtioned</h6>
+                        </div>
+                    </div>
+                </section>
             </div>
 
             <!-- Listing Section -->
@@ -211,7 +241,8 @@
                                         backup</span> + 4 more</p>
                                 <p class="card-text"><s>GHS839</s> <span class="price-tag">GHS367</span> 72% off</p>
                                 <p class="card-text text-muted">+ GHS190 taxes & fees / per room per night</p>
-                                <a href="#" class="btn btn-outline-secondary btn-sm me-2">View Details</a>
+                                <a href="property-details.html" class="btn btn-outline-secondary btn-sm me-2">View
+                                    Details</a>
                                 <a href="#" class="btn btn-book btn-sm">Book Now</a>
                             </div>
                         </div>
@@ -242,7 +273,8 @@
                                         backup</span> + 4 more</p>
                                 <p class="card-text"><s>GHS839</s> <span class="price-tag">GHS367</span> 72% off</p>
                                 <p class="card-text text-muted">+ GHS190 taxes & fees / per room per night</p>
-                                <a href="#" class="btn btn-outline-secondary btn-sm me-2">View Details</a>
+                                <a href="property-details.html" class="btn btn-outline-secondary btn-sm me-2">View
+                                    Details</a>
                                 <a href="#" class="btn btn-book btn-sm">Book Now</a>
                             </div>
                         </div>
@@ -273,7 +305,8 @@
                                         backup</span> + 4 more</p>
                                 <p class="card-text"><s>GHS839</s> <span class="price-tag">GHS367</span> 72% off</p>
                                 <p class="card-text text-muted">+ GHS190 taxes & fees / per room per night</p>
-                                <a href="#" class="btn btn-outline-secondary btn-sm me-2">View Details</a>
+                                <a href="property-details.html" class="btn btn-outline-secondary btn-sm me-2">View
+                                    Details</a>
                                 <a href="#" class="btn btn-book btn-sm">Book Now</a>
                             </div>
                         </div>
@@ -312,7 +345,7 @@
                 <i class="fab fa-instagram"></i>
             </a>
             <a href="" class="text-white me-4">
-                <i class="fab fa-linkedin"></i>p
+                <i class="fab fa-linkedin"></i>
             </a>
             <a href="" class="text-white me-4">
                 <i class="fab fa-tiktok"></i>
